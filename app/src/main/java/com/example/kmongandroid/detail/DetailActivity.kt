@@ -47,10 +47,10 @@ class DetailActivity : AppCompatActivity() {
         tabAdapter.notifyDataSetChanged()
 
         detail_tablayout.setupWithViewPager(detail_vp)
-        detail_tablayout.getTabAt(0)!!.text = "서비스 설명"
-        detail_tablayout.getTabAt(1)!!.text = "서비스 옵션"
-        detail_tablayout.getTabAt(2)!!.text = "전문가 정보"
-        detail_tablayout.getTabAt(3)!!.text = "리뷰"
+        detail_tablayout.getTabAt(0)?.text = "서비스 설명"
+        detail_tablayout.getTabAt(1)?.text = "서비스 옵션"
+        detail_tablayout.getTabAt(2)?.text = "전문가 정보"
+        detail_tablayout.getTabAt(3)?.text = "리뷰"
 
         // 리사이클러뷰
         detailServiceAdapter = DetailServiceAdapter(this)
