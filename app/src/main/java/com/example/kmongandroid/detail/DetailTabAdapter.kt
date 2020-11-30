@@ -22,8 +22,4 @@ class DetailTabAdapter(fm:FragmentManager)
         }
     }
 
-    override fun getItemPosition(`object`: Any): Int {
-        return POSITION_NONE
-    }
-
 }
