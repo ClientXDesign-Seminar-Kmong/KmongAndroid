@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".expertinfo">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+       android:layout_marginRight="161dp"
+        android:layout_marginLeft="95dp"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:id="@+id/head"
+        android:textColor="#000000"
+        tools:text="로고로고디자인"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="1dp"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#34c759"
+        tools:text="접속중"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        android:layout_marginTop="49dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="95dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#656565"
+        tools:text="총 작업 개수"
+        android:id="@+id/text_count"
+        />
+
+    <TextView
+       app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="300dp"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        android:layout_marginTop="49dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="515"
+        />
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="326dp"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        android:layout_marginTop="49dp"
+        android:layout_height="wrap_content"
+        tools:text="건"
+        />
+    <ImageView
+        app:layout_constraintTop_toBottomOf="@+id/text_count"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="95dp"
+        android:layout_width="match_parent"
+       android:id="@+id/line1"
+        android:layout_height="1dp"
+        android:background="@drawable/line"/>
+
+
+    <TextView
+        android:id="@+id/afterline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        android:layout_marginTop="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="95dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#656565"
+        tools:text="만족도"
+        />
+
+    <TextView
+       app:layout_constraintTop_toBottomOf="@id/line1"
+        android:layout_marginTop="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="309dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="99 %"
+        />
+
+    <ImageView
+        app:layout_constraintTop_toBottomOf="@+id/afterline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="95dp"
+        android:layout_width="match_parent"
+        android:id="@+id/secondline"
+        android:layout_height="1dp"
+        android:background="@drawable/line"/>
+
+    <TextView
+        android:id="@+id/aftersecondline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/secondline"
+        android:layout_marginTop="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="95dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#656565"
+        tools:text="평균 응답 시간"
+        />
+
+    <TextView
+        android:id="@+id/thirty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/secondline"
+        android:layout_marginTop="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="280dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#656565"
+        tools:text="30"
+        />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/secondline"
+        android:layout_marginTop="13dp"
+        app:layout_constraintLeft_toRightOf="@+id/thirty"
+        android:layout_marginLeft="2dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#656565"
+        tools:text="분 이내"
+        />
+
+    <ImageView
+        android:id="@+id/thirdline"
+        app:layout_constraintTop_toBottomOf="@+id/aftersecondline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="95dp"
+        android:layout_width="match_parent"
+
+        android:layout_height="1dp"
+        android:background="@drawable/line"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/thirdline"
+        android:layout_marginTop="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="95dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#656565"
+        tools:text="회원 구분"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/thirdline"
+        android:layout_marginTop="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="314dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#656565"
+        tools:text="개인"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
