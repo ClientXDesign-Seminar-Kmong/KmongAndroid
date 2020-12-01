@@ -20,4 +20,19 @@
         android:fontWeight="400"
         android:font="@font/notosansmonocjkkr_bold"/>
 
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/applesdgothicneo_l"/>
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/applesdgothicneo_b"/>
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/applesdgothicneo_m"/>
+
 </font-family>

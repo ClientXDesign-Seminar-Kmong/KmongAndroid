@@ -4,15 +4,319 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navi"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:background="@color/white"
+        app:itemIconTint="@color/bottom_navi_color"
+        app:itemTextColor="@color/bottom_navi_color"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="87:25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.24"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <ImageView
+            android:id="@+id/iv_bell"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.12"
+            app:srcCompat="@drawable/ic_bell" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.12"
+            app:srcCompat="@drawable/ic_search" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/cl_main_top"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navi"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".main.MainActivity">
+            
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingEnd="8dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_home_card" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_main_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@id/rv_home_card">
+
+                <ImageView
+                    android:id="@+id/iv_category_design"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_design" />
+
+                <ImageView
+                    android:id="@+id/iv_category_programming"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="1dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category_design"
+                    app:layout_constraintTop_toTopOf="@id/iv_category_design"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_programming" />
+
+                <ImageView
+                    android:id="@+id/iv_category_video"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="1dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category_programming"
+                    app:layout_constraintTop_toTopOf="@+id/iv_category_programming"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_video" />
+
+                <ImageView
+                    android:id="@+id/iv_category_marketing"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="13dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category_video"
+                    app:layout_constraintTop_toTopOf="@+id/iv_category_video"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_marketing" />
+
+                <ImageView
+                    android:id="@+id/iv_category_translate"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintStart_toStartOf="@id/iv_category_design"
+                    app:layout_constraintTop_toBottomOf="@id/iv_category_design"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_translate" />
+
+                <ImageView
+                    android:id="@+id/iv_category_document"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="1dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category_translate"
+                    app:layout_constraintTop_toTopOf="@id/iv_category_translate"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_document" />
+
+                <ImageView
+                    android:id="@+id/iv_category_consulting"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="1dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category_document"
+                    app:layout_constraintTop_toTopOf="@+id/iv_category_document"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_consulting" />
+
+                <ImageView
+                    android:id="@+id/iv_category_job"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="1dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintEnd_toEndOf="@id/iv_category_marketing"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category_consulting"
+                    app:layout_constraintTop_toTopOf="@+id/iv_category_consulting"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_job" />
+
+                <ImageView
+                    android:id="@+id/iv_category_fortune"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintStart_toStartOf="@id/iv_category_translate"
+                    app:layout_constraintTop_toBottomOf="@id/iv_category_translate"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_fortune" />
+
+                <ImageView
+                    android:id="@+id/iv_category_lesson"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="1dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category_fortune"
+                    app:layout_constraintTop_toTopOf="@id/iv_category_fortune"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_lesson" />
+
+                <ImageView
+                    android:id="@+id/iv_category_order"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="1dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category_lesson"
+                    app:layout_constraintTop_toTopOf="@+id/iv_category_lesson"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_order" />
+
+                <ImageView
+                    android:id="@+id/iv_category_book"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="1dp"
+                    app:layout_constraintDimensionRatio="83:64"
+                    app:layout_constraintEnd_toEndOf="@id/iv_category_job"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category_order"
+                    app:layout_constraintTop_toTopOf="@+id/iv_category_order"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:srcCompat="@drawable/home_category_ic_book" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_design_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cl_main_category">
+
+                <TextView
+                    android:id="@+id/tv_design_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/applesdgothicneo_b"
+                    android:includeFontPadding="false"
+                    android:text="디자인 추천 서비스"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_design_service"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="16dp"
+                    android:paddingStart="16dp"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/tv_design_service"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_main_service" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_programming_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cl_design_service">
+
+                <TextView
+                    android:id="@+id/tv_programming_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/applesdgothicneo_b"
+                    android:includeFontPadding="false"
+                    android:text="프로그래밍 추천 서비스"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_programming_service"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="16dp"
+                    android:paddingStart="16dp"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/tv_programming_service"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_main_service" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

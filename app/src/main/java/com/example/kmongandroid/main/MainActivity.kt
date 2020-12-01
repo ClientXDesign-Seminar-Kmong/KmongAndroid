@@ -1,7 +1,8 @@
-package com.example.kmongandroid
+package com.example.kmongandroid.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.kmongandroid.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
