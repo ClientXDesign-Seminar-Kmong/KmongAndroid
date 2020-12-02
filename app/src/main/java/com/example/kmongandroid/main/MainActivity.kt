@@ -1,16 +1,20 @@
 package com.example.kmongandroid.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.SnapHelper
 import com.example.kmongandroid.R
+import com.example.kmongandroid.detail.DetailActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var homeCardAdapter: HomeCardAdapter
     private lateinit var mainServiceAdapter: MainServiceAdapter
+    private lateinit var mainServiceAdapter2: MainServiceAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,16 +55,34 @@ class MainActivity : AppCompatActivity() {
 
         mainServiceAdapter.notifyDataSetChanged()
 
+        mainServiceAdapter.setItemClickListener(object: MainServiceAdapter.ItemClickListener {
+            override fun onClick(view: View, position: Int) {
+                val intent = Intent(this@MainActivity, DetailActivity::class.java)
+                startActivity(intent)
+            }
+
+        })
+
         // ProgrammingServiceRecyclerview
-        rv_programming_service.adapter = mainServiceAdapter
+        mainServiceAdapter2 = MainServiceAdapter(this)
+
+        rv_programming_service.adapter = mainServiceAdapter2
         rv_programming_service.layoutManager = LinearLayoutManager(this,
                 LinearLayoutManager.HORIZONTAL, false)
 
-        mainServiceAdapter.data = mutableListOf(
-                MainServiceData("https://cdn.pixabay.com/photo/2016/11/29/09/32/concept-1868728_1280.jpg", "타이틀", "5.0", "100개의 평가"),
-                MainServiceData("https://cdn.pixabay.com/photo/2016/11/29/09/32/concept-1868728_1280.jpg", "타이틀", "5.0", "100개의 평가")
+        mainServiceAdapter2.data = mutableListOf(
+                MainServiceData("https://cdn.pixabay.com/photo/2016/11/29/09/32/concept-1868728_1280.jpg", "타이틀22", "5.0", "100개의 평가"),
+                MainServiceData("https://cdn.pixabay.com/photo/2016/11/29/09/32/concept-1868728_1280.jpg", "타이틀22", "5.0", "100개의 평가")
         )
 
-        mainServiceAdapter.notifyDataSetChanged()
+        mainServiceAdapter2.notifyDataSetChanged()
+
+        mainServiceAdapter2.setItemClickListener(object: MainServiceAdapter.ItemClickListener {
+            override fun onClick(view: View, position: Int) {
+                val intent = Intent(this@MainActivity, DetailActivity::class.java)
+                startActivity(intent)
+            }
+
+        })
     }
 }
