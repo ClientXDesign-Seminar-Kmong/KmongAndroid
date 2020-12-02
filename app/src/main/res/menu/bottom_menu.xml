@@ -8,12 +8,12 @@
     <item
         android:id="@+id/menu_category"
         android:icon="@drawable/ic_nav_category_unselected"
-        android:title="카테고리"/>
+        android:title="카테고리" />
 
     <item
         android:id="@+id/menu_message"
         android:icon="@drawable/ic_nav_message_unselected"
-        android:title="메세지"/>
+        android:title="메시지"/>
 
     <item
         android:id="@+id/menu_person"
