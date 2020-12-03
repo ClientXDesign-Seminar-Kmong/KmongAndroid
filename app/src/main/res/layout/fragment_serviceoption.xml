@@ -30,7 +30,7 @@
         android:textStyle="normal"
         android:textSize="12sp"
         android:textColor="#656565"
-        tools:text="신규 가입을 하면"
+        android:text="신규 가입을 하면"
         />
 
     <TextView
@@ -44,7 +44,7 @@
         android:textStyle="normal"
         android:textSize="12sp"
         android:textColor="#000000"
-        tools:text="10,000원 할인쿠폰"
+        android:text="10,000원 할인쿠폰"
         />
 
     <TextView
@@ -58,7 +58,7 @@
         android:textStyle="normal"
         android:textSize="12sp"
         android:textColor="#656565"
-        tools:text="을 드려요!"
+        android:text="을 드려요!"
         />
 
     <ImageView
@@ -70,16 +70,25 @@
         android:layout_marginTop="3dp"
         android:layout_marginLeft="6dp"/>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/first_unselected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        android:layout_marginTop="30dp"
+        >
+
     <ImageView
         android:id="@+id/secondbox"
-        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/image"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:background="@drawable/box"/>
+        android:background="@drawable/box"
+        tools:ignore="NotSibling" />
 
     <ImageView
         android:id="@+id/first_button"
@@ -101,12 +110,238 @@
         android:textStyle="normal"
         android:textSize="18sp"
         android:textColor="#656565"
-        tools:text="텍스트형 로고"
+        android:text="텍스트형 로고"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:visibility="gone"
+    android:id="@+id/first_selected"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/first_unselected">
+
+    <ImageView
+        android:id="@+id/secondbox2"
+        app:layout_constraintTop_toTopOf="@id/first_selected"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="269dp"
+        android:background="@drawable/yellowbox"/>
+
+    <ImageView
+        android:id="@+id/first_button_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_option_selected"
+        app:layout_constraintTop_toTopOf="@+id/secondbox2"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="18dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/secondbox2"
+        app:layout_constraintLeft_toRightOf="@+id/first_button_selected"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="normal"
+        android:textSize="18sp"
+        android:textColor="#656565"
+        android:text="텍스트형 로고"
+        />
+
+    <TextView
+        android:id="@+id/tmp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/secondbox2"
+        android:layout_marginTop="54dp"
+        app:layout_constraintLeft_toLeftOf="@id/secondbox2"
+        android:layout_marginLeft="44dp"
+        android:textStyle="normal"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:text="로고시안 1개 + 수정 2회 + 로고응용 이미지 2컷\n
+(목업) + 원본파일 1개"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_done"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="6dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:textStyle="normal"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="6dp"
+        android:textSize="11sp"
+        android:textColor="#656565"
+        android:text="원본파일 제공"
         />
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_done"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:textStyle="normal"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="28dp"
+        android:textSize="11sp"
+        android:textColor="#656565"
+        android:text="고해상도 파일 제공"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_done"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:textStyle="normal"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="50dp"
+        android:textSize="11sp"
+        android:textColor="#656565"
+        android:text="응용 디자인"
+        />
+
+
+    <ImageView
+        android:id="@+id/last_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_done"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="72dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:textStyle="normal"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="72dp"
+        android:textSize="11sp"
+        android:textColor="#656565"
+        android:text="상업적 이용 가능"
+
+        />
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/last_check"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginLeft="44dp"
+        android:textStyle="normal"
+        android:layout_marginTop="15dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="작업일:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/last_check"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginLeft="89dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="3일"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/last_check"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="125dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="수정 횟수:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/last_check"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="186dp"
+        app:layout_goneMarginTop="15dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="3회"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/num"
+        app:layout_constraintLeft_toLeftOf="@+id/secondbox2"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="44dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:text="65,000원"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/second_unselected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/first_selected">
+
+    <ImageView
         android:id="@+id/thirdbox"
-        app:layout_constraintTop_toBottomOf="@id/secondbox"
+        app:layout_constraintTop_toTopOf="@id/second_unselected"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="16dp"
@@ -135,42 +370,484 @@
         android:textStyle="normal"
         android:textSize="18sp"
         android:textColor="#656565"
-        tools:text="심볼/엠블럼형 로고"
+        android:text="심볼/엠블럼형 로고"
         />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <ImageView
-        android:id="@+id/fourthbox"
-        app:layout_constraintTop_toBottomOf="@id/thirdbox"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="20dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/second_selected"
         android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:background="@drawable/box"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/second_unselected">
+
+
+
+     <ImageView
+    android:id="@+id/thirdbox2"
+    app:layout_constraintTop_toTopOf="@id/second_selected"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="269dp"
+    android:background="@drawable/yellowbox"/>
 
     <ImageView
-        android:id="@+id/thirdbutton"
+        android:id="@+id/secondbutton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/select_but"
-        app:layout_constraintTop_toTopOf="@+id/fourthbox"
-        app:layout_constraintLeft_toLeftOf="@+id/fourthbox"
+        android:background="@drawable/ic_option_selected"
+
+        app:layout_constraintTop_toTopOf="@+id/thirdbox2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="18dp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/fourthbox"
-        app:layout_constraintLeft_toRightOf="@+id/thirdbutton"
+        app:layout_constraintTop_toTopOf="@+id/thirdbox2"
+        app:layout_constraintLeft_toRightOf="@+id/secondbutton2"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="16dp"
         android:textStyle="normal"
         android:textSize="18sp"
         android:textColor="#656565"
-        tools:text="프리미엄로고"
+        tools:text="심볼/엠블럼형 로고"
         />
+    <TextView
+        android:id="@+id/tmp_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/thirdbox2"
+        android:layout_marginTop="54dp"
+        app:layout_constraintLeft_toLeftOf="@id/thirdbox2"
+        android:layout_marginLeft="44dp"
+        android:textStyle="normal"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        tools:text="로고시안 1개 + 수정 2회 + 로고응용 이미지 2컷\n
+(목업) + 원본파일 1개"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_done"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="6dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:textStyle="normal"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="6dp"
+        android:textSize="11sp"
+        android:textColor="#656565"
+        tools:text="원본파일 제공"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_done"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:textStyle="normal"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="28dp"
+        android:textSize="11sp"
+        android:textColor="#656565"
+        tools:text="고해상도 파일 제공"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_done"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:textStyle="normal"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="50dp"
+        android:textSize="11sp"
+        android:textColor="#656565"
+        tools:text="응용 디자인"
+        />
+
+
+    <ImageView
+        android:id="@+id/last_check2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_done"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="72dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tmp_text2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:textStyle="normal"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="72dp"
+        android:textSize="11sp"
+        android:textColor="#656565"
+        android:text="상업적 이용 가능"
+
+        />
+
+    <TextView
+        android:id="@+id/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/last_check2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:layout_marginLeft="44dp"
+        android:textStyle="normal"
+        android:layout_marginTop="15dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="작업일:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/last_check2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:layout_marginLeft="89dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="3일"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/last_check2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="125dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="수정 횟수:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/last_check2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="186dp"
+        app:layout_goneMarginTop="15dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="3회"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/num2"
+        app:layout_constraintLeft_toLeftOf="@+id/thirdbox2"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="44dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        tools:text="65,000원"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/third_unselected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/second_selected">
+
+        <ImageView
+            android:id="@+id/fourthbox"
+            app:layout_constraintTop_toTopOf="@id/third_unselected"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:background="@drawable/box"/>
+
+        <ImageView
+            android:id="@+id/thirdbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/select_but"
+            app:layout_constraintTop_toTopOf="@+id/fourthbox"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="18dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/fourthbox"
+            app:layout_constraintLeft_toRightOf="@+id/thirdbutton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:textColor="#656565"
+            tools:text="프리미엄로고"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/third_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/third_unselected">
+
+        <ImageView
+            android:id="@+id/fourthbox2"
+            app:layout_constraintTop_toTopOf="@id/third_selected"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="269dp"
+            android:background="@drawable/yellowbox"/>
+
+        <ImageView
+            android:id="@+id/thirdbutton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_option_selected"
+
+            app:layout_constraintTop_toTopOf="@+id/fourthbox2"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="18dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/fourthbox2"
+            app:layout_constraintLeft_toRightOf="@+id/thirdbutton2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:textColor="#656565"
+            android:text="심볼/엠블럼형 로고"
+            />
+        <TextView
+            android:id="@+id/tmp_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/fourthbox2"
+            android:layout_marginTop="54dp"
+            app:layout_constraintLeft_toLeftOf="@id/fourthbox2"
+            android:layout_marginLeft="44dp"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:text="로고시안 1개 + 수정 2회 + 로고응용 이미지 2컷\n
+(목업) + 원본파일 1개"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_done"
+            app:layout_constraintTop_toBottomOf="@id/tmp_text3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="6dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tmp_text3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:textStyle="normal"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="6dp"
+            android:textSize="11sp"
+            android:textColor="#656565"
+            android:text="원본파일 제공"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_done"
+            app:layout_constraintTop_toBottomOf="@id/tmp_text3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="28dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tmp_text3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:textStyle="normal"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="28dp"
+            android:textSize="11sp"
+            android:textColor="#656565"
+            android:text="고해상도 파일 제공"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_done"
+            app:layout_constraintTop_toBottomOf="@id/tmp_text3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tmp_text3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:textStyle="normal"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="50dp"
+            android:textSize="11sp"
+            android:textColor="#656565"
+            android:text="응용 디자인"
+            />
+
+
+        <ImageView
+            android:id="@+id/last_check3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_done"
+            app:layout_constraintTop_toBottomOf="@id/tmp_text3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="72dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tmp_text3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:textStyle="normal"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="72dp"
+            android:textSize="11sp"
+            android:textColor="#656565"
+            android:text="상업적 이용 가능"
+
+            />
+
+        <TextView
+            android:id="@+id/num3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/last_check3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginLeft="44dp"
+            android:textStyle="normal"
+            android:layout_marginTop="15dp"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:text="작업일:"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/last_check3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="15dp"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:text="3일"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/last_check3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="125dp"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:text="수정 횟수:"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/last_check3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="186dp"
+            app:layout_goneMarginTop="15dp"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:text="3회"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/num3"
+            app:layout_constraintLeft_toLeftOf="@+id/fourthbox2"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="44dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="65,000원"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
