@@ -22,7 +22,7 @@ tools:context=".Explanation">
     android:layout_marginLeft="16dp"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="46dp"
-    tools:text="안녕하세요\n
+    android:text="안녕하세요\n
 디자인, 미술, 포토그래퍼가 모여있는 로고 회사입니다" />
 
 <TextView
@@ -35,7 +35,7 @@ tools:context=".Explanation">
     app:layout_constraintTop_toBottomOf="@+id/text1"
     android:layout_marginTop="15dp"
 
-    tools:text="다양한 분야에서 다양한 시선으로 고객님을 이해하며\n
+    android:text="다양한 분야에서 다양한 시선으로 고객님을 이해하며\n
 소통하는 감각입니다"
     />
 
@@ -49,7 +49,7 @@ tools:context=".Explanation">
     app:layout_constraintTop_toBottomOf="@+id/text2"
     android:layout_marginTop="15dp"
 
-    tools:text="안녕하세요\n
+    android:text="안녕하세요\n
 디자인, 미술, 포토그래퍼가 모여있는 로고 회사입니다"
     />
 <TextView
@@ -62,7 +62,7 @@ tools:context=".Explanation">
     app:layout_constraintTop_toBottomOf="@+id/text3"
     android:layout_marginTop="15dp"
 
-    tools:text="다양한 분야에서 다양한 시선으로 고객님을 이해하며\n
+    android:text="다양한 분야에서 다양한 시선으로 고객님을 이해하며\n
 소통하는 감각입니다"
     />
 <TextView
@@ -75,7 +75,7 @@ tools:context=".Explanation">
     app:layout_constraintTop_toBottomOf="@+id/text4"
     android:layout_marginTop="15dp"
 
-    tools:text="안녕하세요\n
+    android:text="안녕하세요\n
 디자인, 미술, 포토그래퍼가 모여있는 로고 회사입니다"
     />
 <TextView
@@ -102,7 +102,7 @@ tools:context=".Explanation">
     app:layout_constraintTop_toBottomOf="@+id/text6"
     android:layout_marginTop="15dp"
 
-    tools:text="안녕하세요\n
+    android:text="안녕하세요\n
 디자인, 미술, 포토그래퍼가 모여있는 로고 회사입니다"
     />
 <TextView
@@ -115,7 +115,7 @@ tools:context=".Explanation">
     app:layout_constraintTop_toBottomOf="@+id/text7"
     android:layout_marginTop="15dp"
 
-    tools:text="다양한 분야에서 다양한 시선으로 고객님을 이해하며\n
+    android:text="다양한 분야에서 다양한 시선으로 고객님을 이해하며\n
 소통하는 감각입니다"
     />
 

@@ -20,7 +20,7 @@
         android:textSize="16sp"
         android:id="@+id/head"
         android:textColor="#000000"
-        tools:text="로고로고디자인"
+        android:text="로고로고디자인"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
         android:textStyle="normal"
         android:textSize="12sp"
         android:textColor="#34c759"
-        tools:text="접속중"
+        android:text="접속중"
         />
 
     <TextView
@@ -45,7 +45,7 @@
         android:textStyle="normal"
         android:textSize="14sp"
         android:textColor="#656565"
-        tools:text="총 작업 개수"
+        android:text="총 작업 개수"
         android:id="@+id/text_count"
         />
 
@@ -56,7 +56,7 @@
         android:layout_marginTop="49dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="515"
+        android:text="515"
         />
     <TextView
         app:layout_constraintLeft_toLeftOf="parent"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/head"
         android:layout_marginTop="49dp"
         android:layout_height="wrap_content"
-        tools:text="건"
+        android:text="건"
         />
     <ImageView
         app:layout_constraintTop_toBottomOf="@+id/text_count"
@@ -89,7 +89,7 @@
         android:textStyle="normal"
         android:textSize="14sp"
         android:textColor="#656565"
-        tools:text="만족도"
+        android:text="만족도"
         />
 
     <TextView
@@ -99,7 +99,7 @@
         android:layout_marginLeft="309dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="99 %"
+        android:text="99 %"
         />
 
     <ImageView
@@ -123,7 +123,7 @@
         android:textStyle="normal"
         android:textSize="14sp"
         android:textColor="#656565"
-        tools:text="평균 응답 시간"
+        android:text="평균 응답 시간"
         />
 
     <TextView
@@ -137,7 +137,7 @@
         android:textStyle="normal"
         android:textSize="14sp"
         android:textColor="#656565"
-        tools:text="30"
+        android:text="30"
         />
     <TextView
 
@@ -150,7 +150,7 @@
         android:textStyle="normal"
         android:textSize="14sp"
         android:textColor="#656565"
-        tools:text="분 이내"
+        android:text="분 이내"
         />
 
     <ImageView
@@ -175,7 +175,7 @@
         android:textStyle="normal"
         android:textSize="14sp"
         android:textColor="#656565"
-        tools:text="회원 구분"
+        android:text="회원 구분"
         />
 
     <TextView
@@ -189,6 +189,6 @@
         android:textStyle="normal"
         android:textSize="14sp"
         android:textColor="#656565"
-        tools:text="개인"
+        android:text="개인"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
