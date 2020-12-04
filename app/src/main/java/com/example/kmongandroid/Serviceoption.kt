@@ -37,14 +37,26 @@ class Serviceoption : Fragment() {
         first_button.setOnClickListener{
             firstunselected.visibility=View.GONE
             firstselected.visibility=View.VISIBLE
+            secondselected.visibility=View.GONE
+            secondunselected.visibility=View.VISIBLE
+            thirdselected.visibility=View.GONE
+            thirdunselected.visibility=View.VISIBLE
         }
         secondbutton.setOnClickListener{
             secondunselected.visibility=View.GONE
             secondselected.visibility=View.VISIBLE
+            firstselected.visibility=View.GONE
+            firstunselected.visibility=View.VISIBLE
+            thirdselected.visibility=View.GONE
+            thirdunselected.visibility=View.VISIBLE
         }
         thirdbutton.setOnClickListener{
             thirdunselected.visibility=View.GONE
             thirdselected.visibility=View.VISIBLE
+            secondselected.visibility=View.GONE
+            secondunselected.visibility=View.VISIBLE
+            firstselected.visibility=View.GONE
+            firstunselected.visibility=View.VISIBLE
         }
 
     }

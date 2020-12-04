@@ -67,7 +67,7 @@
         android:background="@drawable/ic_arrow_right"
         app:layout_constraintLeft_toRightOf="@id/thirdtext"
         app:layout_constraintTop_toTopOf="@+id/image"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="9.5dp"
         android:layout_marginLeft="6dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -416,7 +416,7 @@
         android:textStyle="normal"
         android:textSize="18sp"
         android:textColor="#656565"
-        tools:text="심볼/엠블럼형 로고"
+        android:text="심볼/엠블럼형 로고"
         />
     <TextView
         android:id="@+id/tmp_text2"
@@ -429,7 +429,7 @@
         android:textStyle="normal"
         android:textSize="13sp"
         android:textColor="#000000"
-        tools:text="로고시안 1개 + 수정 2회 + 로고응용 이미지 2컷\n
+        android:text="로고시안 1개 + 수정 2회 + 로고응용 이미지 2컷\n
 (목업) + 원본파일 1개"
         />
     <ImageView
@@ -450,7 +450,7 @@
         android:layout_marginTop="6dp"
         android:textSize="11sp"
         android:textColor="#656565"
-        tools:text="원본파일 제공"
+        android:text="원본파일 제공"
         />
 
     <ImageView
@@ -472,7 +472,7 @@
         android:layout_marginTop="28dp"
         android:textSize="11sp"
         android:textColor="#656565"
-        tools:text="고해상도 파일 제공"
+        android:text="고해상도 파일 제공"
         />
 
     <ImageView
@@ -494,7 +494,7 @@
         android:layout_marginTop="50dp"
         android:textSize="11sp"
         android:textColor="#656565"
-        tools:text="응용 디자인"
+        android:text="응용 디자인"
         />
 
 
@@ -586,7 +586,7 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="#000000"
-        tools:text="65,000원"
+        android:text="65,000원"
         />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -628,7 +628,7 @@
             android:textStyle="normal"
             android:textSize="18sp"
             android:textColor="#656565"
-            tools:text="프리미엄로고"
+            android:text="프리미엄로고"
             />
 
 
@@ -674,7 +674,7 @@
             android:textStyle="normal"
             android:textSize="18sp"
             android:textColor="#656565"
-            android:text="심볼/엠블럼형 로고"
+            android:text="프리미엄 로고"
             />
         <TextView
             android:id="@+id/tmp_text3"

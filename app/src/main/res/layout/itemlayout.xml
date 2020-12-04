@@ -8,7 +8,7 @@
       android:id="@+id/overall"
       app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         android:background="@drawable/recyc_box"
       />
 
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/overall"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="86dp"
         android:textStyle="normal"
@@ -74,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/overall"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="20dp"
         android:textStyle="normal"

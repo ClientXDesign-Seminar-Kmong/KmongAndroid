@@ -3,10 +3,7 @@ package com.example.kmongandroid.detail
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.kmongandroid.Explanation
-import com.example.kmongandroid.Serviceoption
-import com.example.kmongandroid.expertinfo
-import com.example.kmongandroid.review
+import com.example.kmongandroid.*
 
 class DetailTabAdapter(fm:FragmentManager)
     : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
@@ -18,7 +15,7 @@ class DetailTabAdapter(fm:FragmentManager)
             0 -> Explanation()
             1 -> Serviceoption()
             2 -> expertinfo()
-            else -> review()
+            else -> reviewwith_recycler()
         }
     }
 
